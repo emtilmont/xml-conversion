@@ -4,9 +4,11 @@ path = ''
 with open('paths.txt', 'r') as file:
     path = file.read().replace('\n', '').strip()
 
-fname = []
+filepaths = []
 for dirpath, dirnames, filenames in os.walk(path):
     for f in filenames:
-        fname.append(os.path.join(dirpath, f))
+        filepaths.append(os.path.join(dirpath, f))
 
-print('fname = %s' %fname)
+for filepath in filepaths:
+    print(filepath)
+    # parse xml

@@ -19,4 +19,4 @@ for index, filepath in enumerate(filepaths):
         locs = dom.getElementsByTagName('loc')
         for loc in locs:
             with open(logfile, 'a') as f:
-                f.write(str(loc) + '\n')
+                f.write('%s\n' % (loc.firstChild.data))
